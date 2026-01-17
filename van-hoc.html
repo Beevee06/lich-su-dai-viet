@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn học - Lịch sử Đại Việt</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .culture-detail {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff3e0 100%);
+            min-height: 100vh;
+        }
+
+        .detail-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .detail-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .detail-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--neutral-900);
+            margin-bottom: 16px;
+        }
+
+        .detail-subtitle {
+            font-size: 20px;
+            color: var(--neutral-700);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .content-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .content-card h3 {
+            font-size: 24px;
+            color: var(--google-yellow);
+            margin-bottom: 16px;
+        }
+
+        .content-card p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--neutral-700);
+            margin-bottom: 16px;
+        }
+
+        .content-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-card ul li {
+            padding: 8px 0;
+            color: var(--neutral-700);
+            display: flex;
+            align-items: start;
+        }
+
+        .content-card ul li:before {
+            content: "📖";
+            margin-right: 8px;
+        }
+
+        .quote-box {
+            background: #fff9e6;
+            border-left: 4px solid var(--google-yellow);
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: var(--neutral-700);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--google-yellow);
+            color: var(--neutral-900);
+            text-decoration: none;
+            border-radius: 24px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #f9a825;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(251, 188, 4, 0.4);
+        }
+
+        .back-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">Lịch sử <span class="highlight">Đại Việt</span></span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Trang chủ</a>
+                <a href="index.html#culture" class="nav-link">Văn hóa</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="culture-detail">
+        <div class="container">
+            <div class="detail-header">
+                <div class="detail-icon">📚</div>
+                <h1 class="detail-title">Văn học Việt Nam</h1>
+                <p class="detail-subtitle">Kho tàng văn học phong phú qua các thời kỳ lịch sử</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>Truyện Kiều</h3>
+                    <p>Đỉnh cao văn học Việt Nam của Đại thi hào Nguyễn Du.</p>
+                    <div class="quote-box">
+                        "Trăm năm trong cõi người ta,<br>
+                        Chữ tài chữ mệnh khéo là ghét nhau"
+                    </div>
+                    <ul>
+                        <li>3.254 câu thơ lục bát</li>
+                        <li>Viết năm 1820</li>
+                        <li>Tác phẩm kinh điển của văn học dân tộc</li>
+                        <li>Phản ánh số phận người phụ nữ phong kiến</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Chinh phụ ngâm</h3>
+                    <p>Tác phẩm của Đặng Trần Côn và Đoàn Thị Điểm về nỗi nhớ người chinh chiến.</p>
+                    <div class="quote-box">
+                        "Thuở trời đất nổi cơn gió bụi,<br>
+                        Khách má hồng phải đợi chàng chinh"
+                    </div>
+                    <ul>
+                        <li>408 câu thơ lục bát</li>
+                        <li>Viết thế kỷ 18</li>
+                        <li>Thể hiện tâm tư người vợ lính</li>
+                        <li>Giá trị nhân văn sâu sắc</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Văn học dân gian</h3>
+                    <p>Kho tàng ca dao, tục ngữ, dân ca phong phú của người Việt.</p>
+                    <ul>
+                        <li>Ca dao về tình yêu, lao động, cuộc sống</li>
+                        <li>Tục ngữ về đạo lý làm người</li>
+                        <li>Truyện cổ tích: Tấm Cám, Sọ Dừa, Thạch Sanh...</li>
+                        <li>Hò, ru, quan họ, lý...</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Hịch tướng sĩ</h3>
+                    <p>Tác phẩm của Trần Quốc Tuấn (Trần Hưng Đạo) kêu gọi kháng chiến.</p>
+                    <div class="quote-box">
+                        "Không có gì quý hơn độc lập, tự do"
+                    </div>
+                    <ul>
+                        <li>Văn xuôi chính luận</li>
+                        <li>Tinh thần yêu nước mãnh liệt</li>
+                        <li>Động viên tinh thần chống Nguyên - Mông</li>
+                        <li>Giá trị lịch sử và văn học</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Bình Ngô đại cáo</h3>
+                    <p>Tác phẩm của Nguyễn Trãi, tuyên bố chiến thắng quân Minh.</p>
+                    <ul>
+                        <li>Viết năm 1428</li>
+                        <li>Văn bản ngoại giao độc đáo</li>
+                        <li>Khẳng định chủ quyền dân tộc</li>
+                        <li>Ngôn ngữ hùng tráng, lập luận sắc bén</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Văn học hiện đại</h3>
+                    <p>Văn học Việt Nam thế kỷ 20-21 với nhiều tác giả nổi tiếng.</p>
+                    <ul>
+                        <li>Nam Cao: Chí Phèo, Lão Hạc</li>
+                        <li>Nguyễn Tuân: Vang bóng một thời</li>
+                        <li>Xuân Diệu: Thơ tình yêu lãng mạn</li>
+                        <li>Nguyễn Nhật Ánh: Văn học thiếu nhi</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="back-container">
+                <a href="index.html#culture" class="back-btn">← Quay lại</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Lịch sử Đại Việt</h4>
+                    <p>Khám phá và bảo tồn di sản lịch sử dân tộc</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lịch sử Đại Việt. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiến trúc - Lịch sử Đại Việt</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .culture-detail {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%);
+            min-height: 100vh;
+        }
+
+        .detail-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .detail-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .detail-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--neutral-900);
+            margin-bottom: 16px;
+        }
+
+        .detail-subtitle {
+            font-size: 20px;
+            color: var(--neutral-700);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .content-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .content-card h3 {
+            font-size: 24px;
+            color: var(--google-blue);
+            margin-bottom: 16px;
+        }
+
+        .content-card p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--neutral-700);
+            margin-bottom: 16px;
+        }
+
+        .content-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-card ul li {
+            padding: 8px 0;
+            color: var(--neutral-700);
+            display: flex;
+            align-items: start;
+        }
+
+        .content-card ul li:before {
+            content: "🏛️";
+            margin-right: 8px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--google-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 24px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #1976D2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(66, 133, 244, 0.4);
+        }
+
+        .back-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">Lịch sử <span class="highlight">Đại Việt</span></span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Trang chủ</a>
+                <a href="index.html#culture" class="nav-link">Văn hóa</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="culture-detail">
+        <div class="container">
+            <div class="detail-header">
+                <div class="detail-icon">🏰</div>
+                <h1 class="detail-title">Kiến trúc Việt Nam</h1>
+                <p class="detail-subtitle">Di sản kiến trúc độc đáo của dân tộc qua các thời kỳ</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>Chùa tháp</h3>
+                    <p>Kiến trúc chùa Việt Nam pha trộn giữa truyền thống và Phật giáo, tạo nên những công trình nghệ thuật độc đáo.</p>
+                    <ul>
+                        <li>Chùa Một Cột (Hà Nội) - biểu tượng kiến trúc độc đáo</li>
+                        <li>Chùa Hương - quần thể chùa hang động</li>
+                        <li>Chùa Bái Đính - quần thể chùa lớn nhất Việt Nam</li>
+                        <li>Tháp Phổ Minh - tháp cổ nhất Việt Nam</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Đình làng</h3>
+                    <p>Trung tâm sinh hoạt văn hóa, tâm linh của cộng đồng làng xã Việt Nam.</p>
+                    <ul>
+                        <li>Kiến trúc mái cong đặc trưng</li>
+                        <li>Hệ thống cột và đòn tay tinh xảo</li>
+                        <li>Trang trí hoa văn rồng phượng</li>
+                        <li>Nơi thờ thần linh, tổ chức lễ hội</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Thành quách</h3>
+                    <p>Hệ thống phòng thủ và kiến trúc quân sự qua các triều đại phong kiến.</p>
+                    <ul>
+                        <li>Thành Nhà Hồ - Di sản thế giới UNESCO</li>
+                        <li>Hoàng thành Thăng Long - trung tâm quyền lực 1000 năm</li>
+                        <li>Thành cổ Quảng Trị - chứng tích lịch sử</li>
+                        <li>Cửa Ô Quan Chưởng - cửa thành cổ Hà Nội</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Cung điện</h3>
+                    <p>Kiến trúc hoàng gia với sự trang trọng và quy mô lớn.</p>
+                    <ul>
+                        <li>Cố đô Huế - quần thể kiến trúc cung đình lớn nhất</li>
+                        <li>Điện Thái Hòa - nơi tổ chức đại triều</li>
+                        <li>Điện Kính Thiên - Hoàng thành Thăng Long</li>
+                        <li>Lăng tẩm các vua Nguyễn</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Nhà rường</h3>
+                    <p>Kiến trúc truyền thống của các dân tộc Tây Bắc.</p>
+                    <ul>
+                        <li>Nhà sàn dân tộc Thái, Mường</li>
+                        <li>Nhà rông của người Bahnar</li>
+                        <li>Nhà dài của người Ê Đê</li>
+                        <li>Sử dụng gỗ, tre, lá</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Kiến trúc hiện đại</h3>
+                    <p>Sự kết hợp giữa truyền thống và hiện đại trong kiến trúc đương đại.</p>
+                    <ul>
+                        <li>Nhà hát Lớn Hà Nội - kiến trúc Pháp</li>
+                        <li>Landmark 81 - tòa nhà cao nhất Việt Nam</li>
+                        <li>Cầu Vàng Đà Nẵng - biểu tượng du lịch mới</li>
+                        <li>Nhà hát Hồ Gươm - kiến trúc hiện đại</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="back-container">
+                <a href="index.html#culture" class="back-btn">← Quay lại</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Lịch sử Đại Việt</h4>
+                    <p>Khám phá và bảo tồn di sản lịch sử dân tộc</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lịch sử Đại Việt. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
