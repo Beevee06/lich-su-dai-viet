@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sự kiện lịch sử - Lịch sử Đại Việt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --google-blue: #4285F4;
@@ -154,14 +155,27 @@
         }
 
         .slide-image {
-            width: 100%;
-            max-width: 600px;
-            height: 320px;
-            object-fit: cover;
-            border-radius: 16px;
+            display: none;
+        }
+
+        .slide-icon {
+            font-size: 100px;
             margin-bottom: 24px;
-            box-shadow: 0 8px 24px rgba(60, 64, 67, 0.2);
-            animation: imageSlideIn 0.6s ease forwards;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 140px;
+            height: 140px;
+            background: linear-gradient(135deg, var(--google-blue), var(--google-purple));
+            border-radius: 50%;
+            color: white;
+            animation: iconBounce 0.6s ease forwards;
+            box-shadow: 0 8px 24px rgba(66, 133, 244, 0.3);
+        }
+
+        .slide-icon i {
+            font-size: 64px;
+            color: white;
         }
 
         @keyframes imageSlideIn {
@@ -172,6 +186,17 @@
             to {
                 opacity: 1;
                 transform: scale(1);
+            }
+        }
+
+        @keyframes iconBounce {
+            0% {
+                opacity: 0;
+                transform: scale(0.5) translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
             }
         }
 
@@ -322,43 +347,128 @@
         }
 
         @media (max-width: 768px) {
-            .carousel-container {
-                width: 95%;
-                height: 500px;
-                margin-top: 100px;
+            .header {
+                padding: 16px;
             }
 
-            .carousel-slide {
-                padding: 40px 20px;
+            .logo-text {
+                font-size: 18px;
             }
 
-            .slide-year {
-                font-size: 48px;
-            }
-
-            .slide-icon {
-                font-size: 60px;
-            }
-
-            .slide-title {
-                font-size: 28px;
-            }
-
-            .slide-description {
-                font-size: 16px;
-            }
-
-            .slide-counter {
-                top: 80px;
-                right: 20px;
+            .back-button {
+                padding: 8px 16px;
                 font-size: 14px;
             }
 
-            .auto-play-toggle {
-                top: 80px;
-                left: 20px;
-                font-size: 12px;
+            .carousel-container {
+                width: 95%;
+                height: auto;
+                min-height: 480px;
+                margin-top: 80px;
+            }
+
+            .carousel-slide {
+                padding: 32px 16px;
+            }
+
+            .slide-icon {
+                width: 100px;
+                height: 100px;
+                font-size: 80px;
+                margin-bottom: 16px;
+            }
+
+            .slide-icon i {
+                font-size: 48px;
+            }
+
+            .slide-year {
+                font-size: 40px;
+                margin-bottom: 12px;
+            }
+
+            .slide-title {
+                font-size: 24px;
+                margin-bottom: 12px;
+            }
+
+            .slide-description {
+                font-size: 15px;
+                line-height: 1.6;
+            }
+
+            .control-btn {
+                width: 44px;
+                height: 44px;
+                font-size: 20px;
+            }
+
+            .carousel-controls {
+                bottom: -80px;
+            }
+
+            .dots {
+                bottom: -60px;
+            }
+
+            .slide-counter {
+                top: 70px;
+                right: 16px;
+                font-size: 13px;
                 padding: 8px 16px;
+            }
+
+            .auto-play-toggle {
+                top: 70px;
+                left: 16px;
+                font-size: 12px;
+                padding: 8px 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-container {
+                width: 98%;
+                min-height: 420px;
+                margin-top: 70px;
+            }
+
+            .carousel-slide {
+                padding: 24px 12px;
+            }
+
+            .slide-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 64px;
+            }
+
+            .slide-icon i {
+                font-size: 40px;
+            }
+
+            .slide-year {
+                font-size: 32px;
+            }
+
+            .slide-title {
+                font-size: 20px;
+            }
+
+            .slide-description {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+            .control-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+
+            .dot {
+                width: 10px;
+                height: 10px;
             }
         }
     </style>
@@ -366,7 +476,7 @@
 <body>
     <header class="header">
         <div class="header-content">
-            <div class="logo-text">Lịch sử <span class="highlight">Đại Việt</span></div>
+            <a href="index.html" class="logo-text">Lịch sử <span class="highlight">Đại Việt</span></a>
             <a href="index.html" class="back-button">← Quay lại</a>
         </div>
     </header>
@@ -377,9 +487,8 @@
 
         <div class="carousel-container">
             <div class="carousel-slide active">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Flag_of_Vietnam.svg/1024px-Flag_of_Vietnam.svg.png" alt="Văn Lang" class="slide-image">
                 <div class="slide-content">
-                    <div class="slide-icon">🏛️</div>
+                    <div class="slide-icon"><i class="fas fa-monument"></i></div>
                     <div class="slide-year">2879 TCN</div>
                     <div class="slide-title">Nhà nước Văn Lang</div>
                     <div class="slide-description">Vua Hùng Vương thứ nhất dựng nước Văn Lang, đánh dấu khởi đầu của lịch sử dân tộc Việt Nam. Đây là một giai đoạn vàng của nền văn minh sông Hồng.</div>
@@ -388,9 +497,8 @@
             </div>
 
             <div class="carousel-slide">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Ngo_Quyen_%281%29.jpg/440px-Ngo_Quyen_%281%29.jpg" alt="Ngô Quyền" class="slide-image">
                 <div class="slide-content">
-                    <div class="slide-icon">⚔️</div>
+                    <div class="slide-icon"><i class="fas fa-trophy"></i></div>
                     <div class="slide-year">938</div>
                     <div class="slide-title">Chiến thắng Bạch Đằng</div>
                     <div class="slide-description">Ngô Quyền đánh bại quân Nam Hán tại sông Bạch Đằng, chấm dứt 1000 năm Bắc thuộc. Thắng lợi này đánh dấu sự độc lập của Việt Nam.</div>
@@ -399,9 +507,8 @@
             </div>
 
             <div class="carousel-slide">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Thang_Long_Citadel_Gate.jpg/640px-Thang_Long_Citadel_Gate.jpg" alt="Thăng Long" class="slide-image">
                 <div class="slide-content">
-                    <div class="slide-icon">👑</div>
+                    <div class="slide-icon"><i class="fas fa-crown"></i></div>
                     <div class="slide-year">1010</div>
                     <div class="slide-title">Dời đô về Thăng Long</div>
                     <div class="slide-description">Lý Thái Tổ dời đô về Đại La, đổi tên thành Thăng Long (nay là Hà Nội). Đây là quyết định quan trọng góp phần phát triển nước Việt.</div>
@@ -410,9 +517,8 @@
             </div>
 
             <div class="carousel-slide">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Tran_Hung_Dao_statue_1.jpg/440px-Tran_Hung_Dao_statue_1.jpg" alt="Trần Hưng Đạo" class="slide-image">
                 <div class="slide-content">
-                    <div class="slide-icon">🛡️</div>
+                    <div class="slide-icon"><i class="fas fa-shield-alt"></i></div>
                     <div class="slide-year">1288</div>
                     <div class="slide-title">Chiến thắng Nguyên - Mông</div>
                     <div class="slide-description">Trần Hưng Đạo đánh bại quân Nguyên - Mông tại sông Bạch Đằng lần thứ ba. Đây là một trong những chiến thắng vĩ đại nhất của lịch sử quân sự thế giới.</div>
@@ -421,9 +527,8 @@
             </div>
 
             <div class="carousel-slide">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/L%C3%AA_Lợi_03.jpg/440px-L%C3%AA_Lợi_03.jpg" alt="Lê Lợi" class="slide-image">
                 <div class="slide-content">
-                    <div class="slide-icon">📜</div>
+                    <div class="slide-icon"><i class="fas fa-scroll"></i></div>
                     <div class="slide-year">1428</div>
                     <div class="slide-title">Lê Lợi dựng nước</div>
                     <div class="slide-description">Khởi nghĩa Lam Sơn thành công, thiết lập triều đại Hậu Lê. Lê Lợi trở thành vua và đưa đất nước vào thời kỳ phát triển.</div>
@@ -432,9 +537,8 @@
             </div>
 
             <div class="carousel-slide">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Vietnam_map.svg/640px-Vietnam_map.svg.png" alt="Nam Vô" class="slide-image">
                 <div class="slide-content">
-                    <div class="slide-icon">🗺️</div>
+                    <div class="slide-icon"><i class="fas fa-map"></i></div>
                     <div class="slide-year">1550 - 1777</div>
                     <div class="slide-title">Chinh phục phương Nam</div>
                     <div class="slide-description">Việt Nam thực hiện chính sách "Nam Vô" (dần dần chinh phục về phía Nam). Hoàn thành việc mở rộng lãnh thổ và thống nhất đất nước.</div>
@@ -443,9 +547,8 @@
             </div>
 
             <div class="carousel-slide">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Vietnam_Independence_Day_%282016%29.jpg/640px-Vietnam_Independence_Day_%282016%29.jpg" alt="Cách mạng tháng Tám" class="slide-image">
                 <div class="slide-content">
-                    <div class="slide-icon">🌟</div>
+                    <div class="slide-icon"><i class="fas fa-star"></i></div>
                     <div class="slide-year">1945</div>
                     <div class="slide-title">Cách mạng tháng Tám</div>
                     <div class="slide-description">Khởi nghĩa thành công, thành lập nước Việt Nam Dân chủ Cộng hòa. Đây là mốc son chói lọi trong lịch sử độc lập và thống nhất của dân tộc.</div>
