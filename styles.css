@@ -235,6 +235,7 @@ body {
     top: 40px;
     transform: translateX(120px);
     z-index: 1;
+    pointer-events: none;
 }
 
 .hammer-sickle {
@@ -1012,6 +1013,16 @@ body {
         font-size: 90px;
         right: auto;
         left: 10%;
+    }
+
+    .hero-symbol {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        display: flex;
+        justify-content: center;
+        margin-top: var(--spacing-md);
     }
     
     .hero-buttons {
