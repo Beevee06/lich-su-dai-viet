@@ -974,12 +974,31 @@ body {
 }
 
 @media (max-width: 640px) {
+    .container {
+        padding: 0 14px;
+    }
+
+    .header {
+        padding: 12px 0;
+    }
+
     .hero-title {
         font-size: 32px;
+        margin-bottom: 16px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
     }
     
     .section-title {
         font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+        font-size: 15px;
+        margin-bottom: 24px;
     }
     
     .logo-text {
@@ -1015,10 +1034,12 @@ body {
         font-size: 140px;
         right: auto;
         left: auto;
+        display: none;
     }
     
     .hero-buttons {
         flex-direction: column;
+        gap: 10px;
     }
     
     .btn {
@@ -1026,6 +1047,7 @@ body {
         justify-content: center;
         font-size: 14px;
         padding: 12px 24px;
+        border-radius: 6px;
     }
     
     .btn i {
@@ -1042,8 +1064,15 @@ body {
         padding: var(--spacing-sm);
     }
 
-    .section-title {
-        font-size: 28px;
+    .timeline-item:nth-child(even) .timeline-content {
+        width: calc(100% - 30px);
+        margin-left: 30px !important;
+    }
+
+    .dynasty-grid,
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .culture-icon {
@@ -1051,35 +1080,172 @@ body {
         height: 80px;
         font-size: 32px;
     }
+
+    .culture-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .footer {
+        padding: 48px 0;
+    }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .header {
+        padding: 10px 0;
+    }
+
     .logo-text {
-        font-size: 20px;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+    }
+
+    .hamburger {
+        padding: 4px;
     }
 
     .hamburger span {
-        width: 20px;
+        width: 18px;
+        height: 2.5px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-title {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 10px 20px;
+        border-radius: 6px;
+    }
+
+    .btn i {
+        font-size: 14px;
+        margin-right: 6px;
     }
 
     .hammer-sickle {
         font-size: 110px;
+        display: none;
+    }
+
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .timeline-section {
+        padding: 60px 0;
+    }
+
+    .timeline-content {
+        padding: 16px;
+        width: calc(100% - 20px);
+        margin-left: 20px !important;
+    }
+
+    .timeline-content h3 {
+        font-size: 16px;
+    }
+
+    .timeline-content h4 {
+        font-size: 14px;
+    }
+
+    .timeline-content p {
+        font-size: 12px;
     }
 
     .timeline-icon {
-        width: 56px;
-        height: 56px;
-        font-size: 32px;
+        width: 52px;
+        height: 52px;
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .dynasties-section,
+    .heroes-section {
+        padding: 60px 0;
+    }
+
+    .dynasty-item,
+    .hero-item {
+        padding: 16px;
+        margin-bottom: 12px;
+    }
+
+    .dynasty-item h3,
+    .hero-item h3 {
+        font-size: 14px;
+    }
+
+    .dynasty-item p,
+    .hero-item p {
+        font-size: 12px;
+    }
+
+    .culture-section {
+        padding: 60px 0;
+    }
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .culture-item {
+        padding: 16px;
     }
 
     .culture-icon {
-        width: 72px;
-        height: 72px;
-        font-size: 28px;
+        width: 64px;
+        height: 64px;
+        font-size: 26px;
     }
 
-    .btn {
-        font-size: 13px;
+    .culture-item h3 {
+        font-size: 14px;
+    }
+
+    .culture-item p {
+        font-size: 12px;
+    }
+
+    .footer {
+        padding: 40px 0;
+    }
+
+    .footer h3 {
+        font-size: 14px;
+    }
+
+    .footer p {
+        font-size: 12px;
     }
 }
 
