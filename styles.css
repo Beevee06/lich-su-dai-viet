@@ -952,16 +952,11 @@ body {
         font-size: 40px;
     }
     
-    .hamburger {
-        display: flex;
+    .header .container {
+        justify-content: flex-start;
+        gap: var(--spacing-sm);
     }
     
-    .nav {
-        gap: var(--spacing-xs);
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
         background: rgba(10, 22, 40, 0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
@@ -1133,6 +1128,8 @@ body {
 
     .hamburger {
         padding: 4px;
+        display: flex;
+        order: -1;
     }
 
     .hamburger span {
