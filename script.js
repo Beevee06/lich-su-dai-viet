@@ -17,6 +17,48 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    // iOS Bottom Navigation Active State
+    const iosNavItems = document.querySelectorAll('.ios-nav-item');
+    const sections = ['home', 'timeline', 'dynasties', 'heroes', 'culture'];
+    
+    if (iosNavItems.length > 0) {
+        // Set initial active state
+        iosNavItems[0].classList.add('active');
+        
+        // Update active on scroll
+        window.addEventListener('scroll', function() {
+            let current = '';
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element && element.offsetTop <= window.scrollY + 100) {
+                    current = section;
+                }
+            });
+            
+            iosNavItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.dataset.section === current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Click handler for iOS nav items
+        iosNavItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const section = this.dataset.section;
+                const target = document.getElementById(section);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Update active state
+                    iosNavItems.forEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+    }
 });
 
 // Smooth scrolling for navigation links

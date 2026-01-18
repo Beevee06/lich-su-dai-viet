@@ -1,4 +1,4 @@
-/* Google Pixel Design System */
+/* Google Pixel Design System + iOS/iPhone UI */
 :root {
     /* Google Colors */
     --google-blue: #4285F4;
@@ -8,6 +8,15 @@
     --google-purple: #A142F4;
     --google-orange: #FF6D00;
     
+    /* iOS Colors */
+    --ios-bg: #F2F2F7;
+    --ios-bg-secondary: #FFFFFF;
+    --ios-label: #000000;
+    --ios-label-secondary: #3C3C43;
+    --ios-separator: #C6C6C8;
+    --ios-blue: #007AFF;
+    --ios-tint: #4285F4;
+    
     /* Neutral Colors */
     --neutral-50: #F8F9FA;
     --neutral-100: #F1F3F4;
@@ -16,9 +25,9 @@
     --neutral-700: #5F6368;
     --neutral-900: #202124;
     
-    /* Typography */
-    --font-primary: 'Google Sans', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-secondary: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* Typography - iOS SF Pro */
+    --font-primary: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+    --font-secondary: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', sans-serif;
     
     /* Spacing */
     --spacing-xs: 8px;
@@ -29,18 +38,26 @@
     --spacing-2xl: 64px;
     --spacing-3xl: 96px;
     
+    /* iOS Safe Area */
+    --safe-area-inset-top: max(12px, env(safe-area-inset-top));
+    --safe-area-inset-bottom: max(12px, env(safe-area-inset-bottom));
+    --safe-area-inset-left: max(12px, env(safe-area-inset-left));
+    --safe-area-inset-right: max(12px, env(safe-area-inset-right));
+    
     /* Border Radius */
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
     --radius-xl: 24px;
     --radius-full: 9999px;
+    --ios-radius: 12px;
     
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
     --shadow-md: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
     --shadow-lg: 0 2px 6px 2px rgba(60, 64, 67, 0.15), 0 8px 24px 4px rgba(60, 64, 67, 0.15);
     --shadow-xl: 0 8px 12px 6px rgba(60, 64, 67, 0.15), 0 16px 32px 6px rgba(60, 64, 67, 0.15);
+    --ios-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 * {
@@ -66,6 +83,10 @@ body {
     background-attachment: fixed;
     line-height: 1.6;
     overflow-x: hidden;
+    padding-top: var(--safe-area-inset-top);
+    padding-bottom: calc(80px + var(--safe-area-inset-bottom));
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .container {
@@ -227,6 +248,109 @@ body {
 .hero-buttons {
     display: flex;
     gap: var(--spacing-sm);
+}
+
+/* iOS/iPhone Style Components */
+
+/* iOS Card Component */
+.ios-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--ios-radius);
+    padding: var(--spacing-md);
+    box-shadow: var(--ios-shadow);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ios-card:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(66, 133, 244, 0.3);
+}
+
+/* iOS Button Styling */
+.ios-btn {
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+    backdrop-filter: blur(20px) saturate(180%);
+}
+
+.ios-btn-primary {
+    background: linear-gradient(135deg, var(--google-blue), #5B9FFF);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+}
+
+.ios-btn-primary:active {
+    transform: scale(0.98);
+    opacity: 0.8;
+}
+
+.ios-btn-secondary {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ios-btn-secondary:active {
+    background: rgba(255, 255, 255, 0.18);
+    transform: scale(0.98);
+}
+
+/* iOS Bottom Navigation */
+.ios-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    padding-bottom: var(--safe-area-inset-bottom);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(30px) saturate(200%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: none;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-top: 8px;
+    z-index: 999;
+}
+
+.ios-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    min-height: 44px;
+    min-width: 44px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ios-nav-item:active,
+.ios-nav-item.active {
+    color: var(--google-blue);
+}
+
+.ios-nav-item i {
+    font-size: 24px;
+}
+
+/* iPhone Notch Simulation */
+@supports (padding: env(safe-area-inset-top)) {
+    .header {
+        padding-top: var(--safe-area-inset-top);
+    }
 }
 
 .hero-symbol {
@@ -993,6 +1117,26 @@ body {
 
     .header {
         padding: 12px 0;
+    }
+
+    /* Show iOS bottom navigation on mobile */
+    .ios-bottom-nav {
+        display: flex;
+    }
+
+    /* Apply iOS card styling to timeline and other components */
+    .timeline-content {
+        background: rgba(255, 255, 255, 0.07) !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        border-radius: var(--ios-radius) !important;
+    }
+
+    .dynasty-item,
+    .hero-item,
+    .culture-item {
+        background: rgba(255, 255, 255, 0.07);
+        border-radius: var(--ios-radius);
+        border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .hero-title {
