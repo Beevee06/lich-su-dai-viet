@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Mỹ thuật - Lịch sử Đại Việt</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .culture-detail {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e9 100%);
+            min-height: 100vh;
+        }
+
+        .detail-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .detail-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .detail-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--neutral-900);
+            margin-bottom: 16px;
+        }
+
+        .detail-subtitle {
+            font-size: 20px;
+            color: var(--neutral-700);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .content-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .content-card h3 {
+            font-size: 24px;
+            color: var(--google-green);
+            margin-bottom: 16px;
+        }
+
+        .content-card p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--neutral-700);
+            margin-bottom: 16px;
+        }
+
+        .content-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-card ul li {
+            padding: 8px 0;
+            color: var(--neutral-700);
+            display: flex;
+            align-items: start;
+        }
+
+        .content-card ul li:before {
+            content: "🎨";
+            margin-right: 8px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--google-green);
+            color: white;
+            text-decoration: none;
+            border-radius: 24px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #2e7d32;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(52, 168, 83, 0.4);
+        }
+
+        .back-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">Lịch sử <span class="highlight">Đại Việt</span></span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Trang chủ</a>
+                <a href="index.html#culture" class="nav-link">Văn hóa</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="culture-detail">
+        <div class="container">
+            <div class="detail-header">
+                <div class="detail-icon">🎨</div>
+                <h1 class="detail-title">Mỹ thuật Việt Nam</h1>
+                <p class="detail-subtitle">Nghệ thuật tạo hình truyền thống và hiện đại</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>Tranh Đông Hồ</h3>
+                    <p>Tranh dân gian truyền thống của làng Đông Hồ, Bắc Ninh.</p>
+                    <ul>
+                        <li>Lịch sử hơn 400 năm</li>
+                        <li>In khắc gỗ truyền thống</li>
+                        <li>Màu sắc từ thiên nhiên: lá, hoa</li>
+                        <li>Chủ đề: đời sống, tết, tín ngưỡng</li>
+                        <li>Nổi tiếng: Đám cưới chuột, Vinh quy bái tổ</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Gốm sứ Bát Tràng</h3>
+                    <p>Nghề gốm sứ truyền thống nổi tiếng của làng Bát Tràng, Hà Nội.</p>
+                    <ul>
+                        <li>Lịch sử gần 700 năm</li>
+                        <li>Sản phẩm đa dạng: bát, đĩa, lọ, tượng</li>
+                        <li>Men trắng ngà, men lam cổ</li>
+                        <li>Kỹ thuật vẽ men tinh xảo</li>
+                        <li>Xuất khẩu nhiều nước</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Thêu lụa</h3>
+                    <p>Nghệ thuật thêu truyền thống với tay nghề tinh xảo.</p>
+                    <ul>
+                        <li>Thêu tay truyền thống</li>
+                        <li>Hoa văn tinh tế, sắc nét</li>
+                        <li>Chủ đề: hoa lá, phong cảnh, chân dung</li>
+                        <li>Làng nghề Vạn Phúc, Hà Đông</li>
+                        <li>Sản phẩm cao cấp, quà tặng</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Tranh sơn mài</h3>
+                    <p>Nghệ thuật độc đáo của Việt Nam, sử dụng sơn cánh gián.</p>
+                    <ul>
+                        <li>Phát triển từ thế kỷ 20</li>
+                        <li>Sử dụng sơn ta, vỏ trứng, bột vàng</li>
+                        <li>Bóng loáng, màu sắc bền</li>
+                        <li>Họa sĩ nổi tiếng: Nguyễn Gia Trí, Nguyễn Sáng</li>
+                        <li>Giá trị nghệ thuật cao</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Điêu khắc</h3>
+                    <p>Nghệ thuật điêu khắc qua các thời kỳ lịch sử.</p>
+                    <ul>
+                        <li>Tượng đồng thời Đông Sơn</li>
+                        <li>Tượng Phật thời Lý - Trần</li>
+                        <li>Điêu khắc gỗ cung đình Huế</li>
+                        <li>Tượng đài lịch sử hiện đại</li>
+                        <li>Nghệ thuật chạm khắc tinh xảo</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Đồ gỗ mỹ nghệ</h3>
+                    <p>Nghề mộc truyền thống với kỹ thuật chạm khắc tinh vi.</p>
+                    <ul>
+                        <li>Làng nghề Đồng Kỵ, Bắc Ninh</li>
+                        <li>Đồ gỗ Phù Yên, Sơn Đồng</li>
+                        <li>Chạm rồng phượng, hoa văn cổ</li>
+                        <li>Sản phẩm: bàn ghế, tủ, giường</li>
+                        <li>Gỗ quý: gụ, hương, lim</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Tranh lụa</h3>
+                    <p>Tranh vẽ trên lụa với kỹ thuật đặc biệt.</p>
+                    <ul>
+                        <li>Màu thấm vào lụa tự nhiên</li>
+                        <li>Hiệu ứng màu nhẹ nhàng, thấm đẫm</li>
+                        <li>Chủ đề phong cảnh, chân dung</li>
+                        <li>Nghệ thuật tinh tế, thanh nhã</li>
+                        <li>Quà tặng cao cấp</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Mỹ thuật đương đại</h3>
+                    <p>Nghệ thuật tạo hình hiện đại Việt Nam.</p>
+                    <ul>
+                        <li>Họa sĩ: Bùi Xuân Phái, Tô Ngọc Vân</li>
+                        <li>Trường phái hội họa Việt Nam</li>
+                        <li>Nghệ thuật cài đặt hiện đại</li>
+                        <li>Triển lãm quốc tế</li>
+                        <li>Kết hợp truyền thống và hiện đại</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="back-container">
+                <a href="index.html#culture" class="back-btn">← Quay lại</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Lịch sử Đại Việt</h4>
+                    <p>Khám phá và bảo tồn di sản lịch sử dân tộc</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lịch sử Đại Việt. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Lịch sử Đại Việt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#home" class="logo-text">Lịch sử <span class="highlight">Đại Việt</span></a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="nav">
+                <a href="#home" class="nav-link active">Trang chủ</a>
+                <a href="#timeline" class="nav-link">Dòng thời gian</a>
+                <a href="#dynasties" class="nav-link">Các triều đại</a>
+                <a href="#heroes" class="nav-link">Anh hùng dân tộc</a>
+                <a href="#culture" class="nav-link">Văn hóa</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Khám phá <span class="gradient-text">Lịch sử Đại Việt</span></h1>
+                <p class="hero-subtitle">Hành trình 4000 năm dựng nước và giữ nước của dân tộc Việt Nam</p>
+                <div class="hero-buttons">
+                    <a href="events.html" class="btn btn-primary"><i class="fas fa-compass"></i> Khám phá ngay</a>
+                    <a href="modern-history.html" class="btn btn-secondary"><i class="fas fa-book-open"></i> Tìm hiểu thêm</a>
+                </div>
+            </div>
+            <div class="hero-symbol">
+                <span class="hammer-sickle">☭</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">Dòng thời gian lịch sử</h2>
+            <p class="section-subtitle">Những mốc quan trọng trong lịch sử dân tộc</p>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-color="blue">
+                    <div class="timeline-content">
+                        <img src="https://luocsutocviet.files.wordpress.com/2021/12/van_lang.jpg?w=500" alt="Đền Hùng Vương" class="timeline-image" data-modal="Nhà nước Văn Lang">
+                        <div class="timeline-icon"><i class="fas fa-monument"></i></div>
+                        <h3>2879 TCN</h3>
+                        <h4>Nhà nước Văn Lang</h4>
+                        <p>Vua Hùng Vương thứ nhất dựng nước Văn Lang, đánh dấu khởi đầu của lịch sử dân tộc Việt Nam</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-color="red">
+                    <div class="timeline-content">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Ng%C3%B4_Quy%E1%BB%81n_%C4%91%E1%BA%A1i_ph%C3%A1_qu%C3%A2n_Nam_H%C3%A1n_tr%C3%AAn_s%C3%B4ng_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg/250px-Ng%C3%B4_Quy%E1%BB%81n_%C4%91%E1%BA%A1i_ph%C3%A1_qu%C3%A2n_Nam_H%C3%A1n_tr%C3%AAn_s%C3%B4ng_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg" alt="Ngô Quyền đại phá quân Nam Hán" class="timeline-image" data-modal="Chiến thắng Bạch Đằng">
+                        <div class="timeline-icon"><i class="fas fa-trophy"></i></div>
+                        <h3>938</h3>
+                        <h4>Chiến thắng Bạch Đằng</h4>
+                        <p>Ngô Quyền đánh bại quân Nam Hán, chấm dứt 1000 năm Bắc thuộc</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-color="yellow">
+                    <div class="timeline-content">
+                        <img src="https://quocphongthudo.vn/upload/2001606/fck/sophia1712/bia.jpg" alt="Thăng Long" class="timeline-image" data-modal="Dời đô về Thăng Long">
+                        <div class="timeline-icon"><i class="fas fa-crown"></i></div>
+                        <h3>1010</h3>
+                        <h4>Dời đô về Thăng Long</h4>
+                        <p>Lý Thái Tổ dời đô về Đại La, đổi tên thành Thăng Long (nay là Hà Nội)</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-color="green">
+                    <div class="timeline-content">
+                        <img src="https://baotanglichsu.vn/DataFiles/Uploaded/image/DATA%20HUONG/Quan%20va%20dan%20dai%20viet%20danh%20bai%20quan%20nguyen%20mong%20lan3/2.jpg" alt="Chiến thắng Nguyên Mông" class="timeline-image" data-modal="Chiến thắng Nguyên - Mông">
+                        <div class="timeline-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>1288</h3>
+                        <h4>Chiến thắng Nguyên - Mông</h4>
+                        <p>Trần Hưng Đạo đánh bại quân Nguyên - Mông tại sông Bạch Đằng lần thứ ba</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-color="purple">
+                    <div class="timeline-content">
+                        <img src="https://holevietnam.vn/wp-content/uploads/2021/04/LE-LOI-photo-1-15477312810471281456024.jpg" alt="Lê Lợi" class="timeline-image" data-modal="Lê Lợi dựng nước">
+                        <div class="timeline-icon"><i class="fas fa-scroll"></i></div>
+                        <h3>1428</h3>
+                        <h4>Lê Lợi dựng nước</h4>
+                        <p>Khởi nghĩa Lam Sơn thành công, thiết lập triều đại Hậu Lê</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-color="orange">
+                    <div class="timeline-content">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/C%C3%A1ch_m%E1%BA%A1ng_th%C3%A1ng_8_b.jpg/250px-C%C3%A1ch_m%E1%BA%A1ng_th%C3%A1ng_8_b.jpg" alt="Cách mạng tháng Tám" class="timeline-image" data-modal="Cách mạng tháng Tám">
+                        <div class="timeline-icon"><i class="fas fa-star"></i></div>
+                        <h3>1945</h3>
+                        <h4>Cách mạng tháng Tám</h4>
+                        <p>Thành lập nước Việt Nam Dân chủ Cộng hòa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynasties Section -->
+    <section id="dynasties" class="dynasties-section">
+        <div class="container">
+            <h2 class="section-title">Các triều đại lịch sử</h2>
+            <p class="section-subtitle">Những triều đại đã góp phần xây dựng và phát triển đất nước</p>
+            
+            <div class="dynasties-grid">
+                <a href="https://vi.wikipedia.org/wiki/Nh%C3%A0_L%C3%BD" target="_blank" class="dynasty-card">
+                    <div class="card-header blue-gradient">
+                        <h3><i class="fas fa-crown"></i> Nhà Lý</h3>
+                        <span class="period">1009 - 1225</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Triều đại mở đầu thời kỳ phong kiến rực rỡ với việc dời đô về Thăng Long và phát triển Phật giáo</p>
+                        <ul class="achievements">
+                            <li>✓ Dời đô về Thăng Long</li>
+                            <li>✓ Xây dựng chùa Một Cột</li>
+                            <li>✓ Phát triển văn hóa Phật giáo</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="https://vi.wikipedia.org/wiki/Nh%C3%A0_Tr%E1%BA%A7n_(Vi%E1%BB%87t_Nam)" target="_blank" class="dynasty-card">
+                    <div class="card-header red-gradient">
+                        <h3><i class="fas fa-shield-alt"></i> Nhà Trần</h3>
+                        <span class="period">1225 - 1400</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Triều đại nổi tiếng với chiến công chống quân Nguyên - Mông ba lần xâm lược</p>
+                        <ul class="achievements">
+                            <li>✓ Ba lần đánh thắng Nguyên - Mông</li>
+                            <li>✓ Phát triển chữ Nôm</li>
+                            <li>✓ Xây dựng hệ thống giáo dục</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="https://vi.wikipedia.org/wiki/Nh%C3%A0_L%C3%AA_(Vi%E1%BB%87t_Nam)" target="_blank" class="dynasty-card">
+                    <div class="card-header yellow-gradient">
+                        <h3><i class="fas fa-landmark"></i> Nhà Lê</h3>
+                        <span class="period">1428 - 1789</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Triều đại kéo dài nhất trong lịch sử với nhiều cải cách quan trọng</p>
+                        <ul class="achievements">
+                            <li>✓ Ban hành bộ luật Hồng Đức</li>
+                            <li>✓ Phát triển khoa cử</li>
+                            <li>✓ Mở rộng lãnh thổ về phía Nam</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="https://vi.wikipedia.org/wiki/Nh%C3%A0_Nguy%E1%BB%85n" target="_blank" class="dynasty-card">
+                    <div class="card-header green-gradient">
+                        <h3><i class="fas fa-dragon"></i> Nhà Nguyễn</h3>
+                        <span class="period">1802 - 1945</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Triều đại cuối cùng của chế độ phong kiến Việt Nam</p>
+                        <ul class="achievements">
+                            <li>✓ Thống nhất đất nước</li>
+                            <li>✓ Xây dựng Kinh thành Huế</li>
+                            <li>✓ Hoàn thành lãnh thổ Việt Nam</li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heroes Section -->
+    <section id="heroes" class="heroes-section">
+        <div class="container">
+            <h2 class="section-title">Anh hùng dân tộc</h2>
+            <p class="section-subtitle">Những người con ưu tú của dân tộc</p>
+            
+            <div class="heroes-grid">
+                <a href="https://vi.wikipedia.org/wiki/Hai_B%C3%A0_Tr%C6%B0ng" target="_blank" class="hero-card hero-link">
+                    <div class="hero-avatar purple-bg">
+                        <span class="hero-initial">HV</span>
+                    </div>
+                    <h3>Hai Bà Trưng</h3>
+                    <p class="hero-role">40 - 43</p>
+                    <p class="hero-desc">Khởi nghĩa chống đô hộ Bắc thuộc, lập nên nhà nước tự chủ đầu tiên</p>
+                </a>
+
+                <a href="https://vi.wikipedia.org/wiki/Ng%C3%B4_Quy%E1%BB%81n" target="_blank" class="hero-card hero-link">
+                    <div class="hero-avatar blue-bg">
+                        <span class="hero-initial">NQ</span>
+                    </div>
+                    <h3>Ngô Quyền</h3>
+                    <p class="hero-role">897 - 944</p>
+                    <p class="hero-desc">Đánh thắng quân Nam Hán, kết thúc 1000 năm Bắc thuộc</p>
+                </a>
+
+                <a href="https://vi.wikipedia.org/wiki/Tr%E1%BA%A7n_H%C6%B0ng_%C4%90%E1%BA%A1o" target="_blank" class="hero-card hero-link">
+                    <div class="hero-avatar red-bg">
+                        <span class="hero-initial">THĐ</span>
+                    </div>
+                    <h3>Trần Hưng Đạo</h3>
+                    <p class="hero-role">1228 - 1300</p>
+                    <p class="hero-desc">Thống soái ba lần đánh thắng quân Nguyên - Mông</p>
+                </a>
+
+                <a href="https://vi.wikipedia.org/wiki/L%C3%AA_L%E1%BB%A3i" target="_blank" class="hero-card hero-link">
+                    <div class="hero-avatar yellow-bg">
+                        <span class="hero-initial">LL</span>
+                    </div>
+                    <h3>Lê Lợi</h3>
+                    <p class="hero-role">1385 - 1433</p>
+                    <p class="hero-desc">Lãnh đạo khởi nghĩa Lam Sơn, đánh đuổi quân Minh</p>
+                </a>
+
+                <a href="https://vi.wikipedia.org/wiki/Nguy%E1%BB%85n_Tr%C3%A3i" target="_blank" class="hero-card hero-link">
+                    <div class="hero-avatar green-bg">
+                        <span class="hero-initial">NQ</span>
+                    </div>
+                    <h3>Nguyễn Trãi</h3>
+                    <p class="hero-role">1380 - 1442</p>
+                    <p class="hero-desc">Đại danh nhân văn hóa, quân sự và ngoại giao</p>
+                </a>
+
+                <a href="https://vi.wikipedia.org/wiki/Quang_Trung" target="_blank" class="hero-card hero-link">
+                    <div class="hero-avatar orange-bg">
+                        <span class="hero-initial">QG</span>
+                    </div>
+                    <h3>Quang Trung</h3>
+                    <p class="hero-role">1753 - 1792</p>
+                    <p class="hero-desc">Đánh tan 29 vạn quân Thanh trong 7 ngày đêm Tết</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section id="culture" class="culture-section">
+        <div class="container">
+            <h2 class="section-title">Di sản văn hóa</h2>
+            <p class="section-subtitle">Những giá trị văn hóa truyền thống</p>
+            
+            <div class="culture-grid">
+                <a href="kien-truc.html" class="culture-item">
+                    <div class="culture-icon"><i class="fas fa-torii-gate"></i></div>
+                    <h3>Kiến trúc</h3>
+                    <p>Chùa tháp, đình làng, thành quách, cung điện...</p>
+                </a>
+                <a href="van-hoc.html" class="culture-item">
+                    <div class="culture-icon"><i class="fas fa-book-open"></i></div>
+                    <h3>Văn học</h3>
+                    <p>Truyện Kiều, Chinh phụ ngâm, thơ ca dân gian...</p>
+                </a>
+                <a href="nghe-thuat.html" class="culture-item">
+                    <div class="culture-icon"><i class="fas fa-theater-masks"></i></div>
+                    <h3>Nghệ thuật</h3>
+                    <p>Múa rối nước, hát chèo, ca trù, tuồng...</p>
+                </a>
+                <a href="my-thuat.html" class="culture-item">
+                    <div class="culture-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Mỹ thuật</h3>
+                    <p>Tranh Đông Hồ, gốm sứ Bát Tràng, lụa...</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Lịch sử Đại Việt</h4>
+                    <p>Khám phá và bảo tồn di sản lịch sử dân tộc</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên kết</h4>
+                    <ul class="footer-links">
+                        <li><a href="#timeline">Dòng thời gian</a></li>
+                        <li><a href="#dynasties">Các triều đại</a></li>
+                        <li><a href="#heroes">Anh hùng</a></li>
+                        <li><a href="#culture">Văn hóa</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Theo dõi</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/phan.huynh.uc.thinh/about?locale=vi_VN" target="_blank" class="social-icon">FB</a>
+                        <a href="https://www.instagram.com/ducthinhphanhuynh/" target="_blank" class="social-icon">IG</a>
+                        <a href="#" class="social-icon">YT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lịch sử Đại Việt. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Lightbox -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <p id="modalTitle"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
